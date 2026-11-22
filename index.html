@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>制作サイト一覧</title>
+<meta name="description" content="これまでに作ったWebサイト・アプリの一覧です。公開中のサイトと、コードのみ公開しているものを分けて掲載しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#222;--paper:#faf8f4;--mute:#6f6a63;--line:#dcd6cc;--accent:#b5533f;--gutter:24px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 var(--gutter)}
+header{padding:96px 0 56px}
+header p.label{font-size:12px;letter-spacing:.2em;color:var(--mute);margin-bottom:16px}
+h1{font-family:"Noto Serif JP",serif;font-size:clamp(30px,5vw,48px);line-height:1.4}
+header .lead{margin-top:20px;color:#4a453f;max-width:34em}
+section{padding:40px 0 24px}
+h2{font-size:14px;letter-spacing:.14em;color:var(--mute);font-weight:500;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+ul{list-style:none}
+li{display:grid;grid-template-columns:1fr auto;gap:8px 32px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+li h3{font-size:19px;font-weight:700;line-height:1.5}
+li p{margin-top:4px;font-size:15px;color:#4a453f;max-width:34em}
+li .host{display:block;margin-top:6px;font-size:12px;color:var(--mute);word-break:break-all}
+.go{font-weight:700;font-size:14px;text-decoration:none;color:#fff;background:var(--accent);padding:10px 22px;white-space:nowrap}
+.go:hover{background:#9c4333}
+.go.sub{background:transparent;color:var(--ink);border:1px solid var(--ink);padding:9px 21px}
+.go.sub:hover{background:var(--ink);color:var(--paper)}
+footer{padding:48px 0 72px;font-size:12px;color:var(--mute)}
+@media(max-width:640px){
+  :root{--gutter:20px}
+  header{padding:72px 0 40px}
+  li{grid-template-columns:1fr}
+  .go{justify-self:start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="label">WORKS</p>
+    <h1>制作サイト一覧</h1>
+    <p class="lead">これまでに作ったWebサイトとアプリです。公開中のものは、そのまま開いて見られます。</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>公開中のサイト</h2>
+      <ul>
+        <li>
+          <div>
+            <h3>Lumi Salon</h3>
+            <p>浦添市の完全予約制の個人サロンを想定したHP。フェイシャルとまつ毛ケア、LINE・Instagramへの予約導線つき。（架空のサロン）</p>
+            <span class="host">agarieyrn-create.github.io/lumi-salon-hp</span>
+          </div>
+          <a class="go" href="https://agarieyrn-create.github.io/lumi-salon-hp/">サイトを見る</a>
+        </li>
+        <li>
+          <div>
+            <h3>コーラの魅力LP</h3>
+            <p>ひと口目の爽快感を主役に、味や飲み方をまとめた非公式ファンLP。実写風の画像で作り込んだ静止デザイン。</p>
+            <span class="host">agarieyrn-create.github.io/cola-lp</span>
+          </div>
+          <a class="go" href="https://agarieyrn-create.github.io/cola-lp/">サイトを見る</a>
+        </li>
+        <li>
+          <div>
+            <h3>WebCreat</h3>
+            <p>AIを使ったウェブ制作のポートフォリオ。</p>
+            <span class="host">agarieyrn-create.github.io/webcreat</span>
+          </div>
+          <a class="go" href="https://agarieyrn-create.github.io/webcreat/">サイトを見る</a>
+        </li>
+        <li>
+          <div>
+            <h3>アップライフ治療院</h3>
+            <p>宜野湾市の治療院のホームページと、来店予約管理システムを一体にしたWebアプリ。</p>
+            <span class="host">agarieyrn-create.github.io/seitai_ginowan</span>
+          </div>
+          <a class="go" href="https://agarieyrn-create.github.io/seitai_ginowan/">サイトを見る</a>
+        </li>
+        <li>
+          <div>
+            <h3>業務改善とWebアプリ制作 Portfolio</h3>
+            <p>予約・顧客管理・帳票・LINE連携・AI運用など、業務改善Webアプリの制作実績をまとめたポートフォリオ。</p>
+            <span class="host">portfolio-agarieyrn-9686.vercel.app</span>
+          </div>
+          <a class="go" href="https://portfolio-agarieyrn-9686.vercel.app">サイトを見る</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>コードのみ公開</h2>
+      <ul>
+        <li>
+          <div>
+            <h3>てだこボウル 集客用サイト</h3>
+            <p>浦添市のボウリング場の集客用1ページサイト。ビルド不要で、index.html をブラウザで開くとそのまま表示できます。</p>
+            <span class="host">github.com/agarieyrn-create/tedako-bowl-site</span>
+          </div>
+          <a class="go sub" href="https://github.com/agarieyrn-create/tedako-bowl-site">GitHubを見る</a>
+        </li>
+        <li>
+          <div>
+            <h3>勤怠管理システム</h3>
+            <p>Google Apps Script で作った、勤怠・残業・休暇の管理システム。</p>
+            <span class="host">github.com/agarieyrn-create/attendance-management</span>
+          </div>
+          <a class="go sub" href="https://github.com/agarieyrn-create/attendance-management">GitHubを見る</a>
+        </li>
+        <li>
+          <div>
+            <h3>Tournament Pro</h3>
+            <p>スポーツ大会の運営（チーム・日程・順位表の管理）をまとめたGoogle Apps Scriptのアプリ。</p>
+            <span class="host">github.com/agarieyrn-create/sports-to-nament</span>
+          </div>
+          <a class="go sub" href="https://github.com/agarieyrn-create/sports-to-nament">GitHubを見る</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Lumi Salon は架空のサロンです。掲載の住所・電話番号・料金・人物はすべて架空で、画像は画像生成によるイメージです。コーラの魅力LPは非公式のファンページで、特定の企業・ブランドとは関係ありません。
+  </footer>
+</div>
+</body>
+</html>
