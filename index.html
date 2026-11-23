@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>制作サイト一覧</title>
 <meta name="description" content="これまでに作ったWebサイト・アプリの一覧です。公開中のサイトと、コードのみ公開しているものを分けて掲載しています。">
+<link rel="canonical" href="https://agarieyrn-create.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="制作サイト一覧">
+<meta property="og:description" content="これまでに作ったWebサイト・アプリの一覧です。公開中のサイトと、コードのみ公開しているものを分けて掲載しています。">
+<meta property="og:url" content="https://agarieyrn-create.github.io/">
+<meta property="og:image" content="https://agarieyrn-create.github.io/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23b5533f'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700&display=swap" rel="stylesheet">
@@ -22,6 +31,8 @@ section{padding:40px 0 24px}
 h2{font-size:14px;letter-spacing:.14em;color:var(--mute);font-weight:500;padding-bottom:12px;border-bottom:1px solid var(--ink)}
 ul{list-style:none}
 li{display:grid;grid-template-columns:1fr auto;gap:8px 32px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+li.has-thumb{grid-template-columns:200px 1fr auto;gap:8px 28px;align-items:center}
+.thumb img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;border:1px solid var(--line)}
 li h3{font-size:19px;font-weight:700;line-height:1.5}
 li p{margin-top:4px;font-size:15px;color:#4a453f;max-width:34em}
 li .host{display:block;margin-top:6px;font-size:12px;color:var(--mute);word-break:break-all}
@@ -33,7 +44,8 @@ footer{padding:48px 0 72px;font-size:12px;color:var(--mute)}
 @media(max-width:640px){
   :root{--gutter:20px}
   header{padding:72px 0 40px}
-  li{grid-template-columns:1fr}
+  li,li.has-thumb{grid-template-columns:1fr}
+  .thumb{max-width:360px}
   .go{justify-self:start}
 }
 </style>
@@ -50,47 +62,53 @@ footer{padding:48px 0 72px;font-size:12px;color:var(--mute)}
     <section>
       <h2>公開中のサイト</h2>
       <ul>
-        <li>
+        <li class="has-thumb">
+          <a class="thumb" href="https://agarieyrn-create.github.io/studio-ryu-lp/" tabindex="-1" aria-hidden="true"><img src="thumbs/studio-ryu-lp.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
           <div>
             <h3>Studio RYU</h3>
-            <p>豊見城市の完全個室パーソナルジムを想定したLP。運動が続かなかった人向けに、無料体験への導線を整えた集客サイト。（架空のジム）</p>
+            <p>豊見城市の完全個室パーソナルジムを想定したLP。運動が続かなかった人向けに、無料体験への導線を整えた集客サイト。スクロール演出つき。（架空のジム）</p>
             <span class="host">agarieyrn-create.github.io/studio-ryu-lp</span>
           </div>
           <a class="go" href="https://agarieyrn-create.github.io/studio-ryu-lp/">サイトを見る</a>
         </li>
-        <li>
+        <li class="has-thumb">
+          <a class="thumb" href="https://agarieyrn-create.github.io/hinata-seitai-hp/" tabindex="-1" aria-hidden="true"><img src="thumbs/hinata-seitai-hp.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
           <div>
             <h3>ひなた整体院</h3>
-            <p>那覇市の整体院を想定した5ページ構成のHP。お悩み別、料金・流れ、院長紹介、アクセス・FAQを備えた集客サイト。（架空の整体院）</p>
+            <p>那覇市の整体院を想定した5ページ構成のHP。お悩み別、料金・流れ、院長紹介、アクセス・FAQを備えた集客サイト。スクロール演出つき。（架空の整体院）</p>
             <span class="host">agarieyrn-create.github.io/hinata-seitai-hp</span>
           </div>
           <a class="go" href="https://agarieyrn-create.github.io/hinata-seitai-hp/">サイトを見る</a>
         </li>
-        <li>
+        <li class="has-thumb">
+          <a class="thumb" href="https://agarieyrn-create.github.io/nagi-coffee-lp/" tabindex="-1" aria-hidden="true"><img src="thumbs/nagi-coffee-lp.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
           <div>
             <h3>Nagi Coffee</h3>
-            <p>北谷町の海が見えるカフェを想定したLP。メニュー、テラス席、テイクアウトを、写真を主役に紹介。（架空のカフェ）</p>
+            <p>北谷町の海が見えるカフェを想定したLP。メニュー、テラス席、テイクアウトを、写真を主役に紹介。スクロール演出つき。（架空のカフェ）</p>
             <span class="host">agarieyrn-create.github.io/nagi-coffee-lp</span>
           </div>
           <a class="go" href="https://agarieyrn-create.github.io/nagi-coffee-lp/">サイトを見る</a>
         </li>
-        <li>
+        <li class="has-thumb">
+          <a class="thumb" href="https://agarieyrn-create.github.io/lumi-salon-hp/" tabindex="-1" aria-hidden="true"><img src="thumbs/lumi-salon-hp.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
           <div>
             <h3>Lumi Salon</h3>
-            <p>浦添市の完全予約制の個人サロンを想定したHP。フェイシャルとまつ毛ケア、LINE・Instagramへの予約導線つき。（架空のサロン）</p>
+            <p>浦添市の完全予約制の個人サロンを想定したHP。フェイシャルとまつ毛ケア、LINE・Instagramへの予約導線とスクロール演出つき。（架空のサロン）</p>
             <span class="host">agarieyrn-create.github.io/lumi-salon-hp</span>
           </div>
           <a class="go" href="https://agarieyrn-create.github.io/lumi-salon-hp/">サイトを見る</a>
         </li>
-        <li>
+        <li class="has-thumb">
+          <a class="thumb" href="https://agarieyrn-create.github.io/shenturn-lp/" tabindex="-1" aria-hidden="true"><img src="thumbs/shenturn-lp.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
           <div>
             <h3>シェンターン</h3>
-            <p>ゆず・レモン・ミント・バジルの無色透明の炭酸水を想定した商品LP。明るい基調で、商品写真を主役にした静止デザイン。（架空の商品）</p>
+            <p>ゆず・レモン・ミント・バジルの無色透明の炭酸水を想定した商品LP。明るい基調で商品写真を主役にし、スクロールに合わせて写真と背景色がゆっくり変わる演出を入れています。（架空の商品）</p>
             <span class="host">agarieyrn-create.github.io/shenturn-lp</span>
           </div>
           <a class="go" href="https://agarieyrn-create.github.io/shenturn-lp/">サイトを見る</a>
         </li>
-        <li>
+        <li class="has-thumb">
+          <a class="thumb" href="https://agarieyrn-create.github.io/cola-lp/" tabindex="-1" aria-hidden="true"><img src="thumbs/cola-lp.webp" width="800" height="500" alt="" loading="lazy" decoding="async"></a>
           <div>
             <h3>コーラの魅力LP</h3>
             <p>ひと口目の爽快感を主役に、味や飲み方をまとめた非公式ファンLP。実写風の画像で作り込んだ静止デザイン。</p>
