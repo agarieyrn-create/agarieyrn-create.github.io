@@ -16,11 +16,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="motion.css">
 </head>
 <body>
 <p class="demo">架空の店舗によるデザイン制作例です</p>
-<header><div class="wrap"><a class="brand" href="#top">まるあかり</a><nav><a href="#menu">料理</a><a href="#course">コース</a><a href="#info">店舗情報</a><a class="btn-s" href="#" data-link="tel">電話で予約</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="#top">まるあかり</a><nav><a href="#menu">料理</a><a href="#seats">お席</a><a href="#course">コース</a><a href="#info">店舗情報</a><a class="btn-s" href="#" data-link="tel">電話で予約</a></nav></div></header>
 
 <main id="top">
   <div class="hero">
@@ -36,8 +35,18 @@
     </div>
   </div>
 
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="split">
+        <img src="img/gaikan.webp" srcset="img/gaikan-800.webp 800w, img/gaikan.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="赤瓦の庇に藍色の暖簾と赤提灯がかかる、夜の店の入口（イメージ）">
+        <div><h2>路地の赤提灯が、<br>目印です。</h2><p class="lead">仕事帰りに一人でふらっと。週末は家族や仲間とゆっくり。炭の香りと、島の器と、にぎやかな声のある店です。</p></div>
+      </div>
+      <figure class="wide"><img src="img/kanpai.webp" srcset="img/kanpai-800.webp 800w, img/kanpai.webp 1536w" sizes="(max-width:1000px) 100vw, 960px" width="1536" height="1024" loading="lazy" decoding="async" alt="料理が並ぶ卓の上で、ビールと琉球グラスで乾杯する手元（イメージ）"></figure>
+    </div>
+  </section>
+
   <section class="fire" id="fire">
-    <div class="fire-shot"><img src="img/sumibi.webp" srcset="img/sumibi-800.webp 800w, img/sumibi.webp 1536w" sizes="(max-width:820px) 100vw, 62vw" width="1536" height="1024" alt="赤く熾った炭の上で、焼き鳥の串を返す手元（イメージ）" data-nopar><div class="embers" aria-hidden="true"></div><button type="button" class="stop" hidden>動きを止める</button></div>
+    <div class="fire-shot"><img src="img/sumibi.webp" srcset="img/sumibi-800.webp 800w, img/sumibi.webp 1536w" sizes="(max-width:1099px) 100vw, 62vw" width="1536" height="1024" loading="lazy" decoding="async" alt="赤く熾った炭の上で、焼き鳥の串を返す手元（イメージ）"></div>
     <div class="fire-text">
       <h2>一本ずつ、<br>目の前で焼きます。</h2>
       <ol class="steps3">
@@ -50,26 +59,45 @@
 
   <section class="sec tint" id="menu">
     <div class="wrap">
-      <h2>まずは、この三品。</h2>
+      <h2>お品書き</h2>
+      <h3 class="cat">まずは、この三品</h3>
       <div class="dishes">
-        <figure class="item dish big"><img src="img/yakitori.webp" srcset="img/yakitori-800.webp 800w, img/yakitori.webp 1536w" sizes="(max-width:820px) 100vw, 960px" width="1536" height="1024" alt="焼き物の角皿に並んだ焼き鳥5本とレモン（イメージ）"><figcaption><h3>炭火焼き鳥 盛り合わせ</h3><em>¥880</em><p>5本　塩・たれ</p></figcaption></figure>
-        <figure class="item dish"><img src="img/goya.webp" srcset="img/goya-800.webp 800w, img/goya.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" alt="やちむんの皿に盛ったゴーヤーチャンプルー（イメージ）"><figcaption><h3>ゴーヤーチャンプルー</h3><em>¥780</em><p>島豆腐と卵、ポークで</p></figcaption></figure>
-        <figure class="item dish"><img src="img/jimami.webp" srcset="img/jimami-800.webp 800w, img/jimami.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" alt="小鉢に盛ったジーマーミ豆腐とわさび（イメージ）"><figcaption><h3>自家製ジーマーミ豆腐</h3><em>¥480</em><p>もっちり、甘めのたれで</p></figcaption></figure>
-      </div>
-      <div class="price">
-        <div class="row"><div>ラフテー</div><em>¥850</em></div>
-        <div class="row"><div>海ぶどう</div><em>¥680</em></div>
-        <div class="row"><div>島らっきょうの天ぷら</div><em>¥620</em></div>
-        <div class="row"><div>生ビール</div><em>¥580</em></div>
-        <div class="row"><div>泡盛（グラス）</div><em>¥450</em></div>
-        <div class="row"><div>シークヮーサージュース</div><em>¥380</em></div>
-      </div>
+        <figure class="dish big"><img src="img/yakitori.webp" srcset="img/yakitori-800.webp 800w, img/yakitori.webp 1536w" sizes="(max-width:1000px) 100vw, 960px" width="1536" height="1024" loading="lazy" decoding="async" alt="焼き物の角皿に並んだ焼き鳥5本とレモン（イメージ）"><figcaption><h3>炭火焼き鳥 盛り合わせ</h3><em>¥880</em><p>5本　塩・たれ</p></figcaption></figure>
+        <figure class="dish"><img src="img/goya.webp" srcset="img/goya-800.webp 800w, img/goya.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="やちむんの皿に盛ったゴーヤーチャンプルー（イメージ）"><figcaption><h3>ゴーヤーチャンプルー</h3><em>¥780</em><p>島豆腐と卵、ポークで</p></figcaption></figure>
+        <figure class="dish"><img src="img/jimami.webp" srcset="img/jimami-800.webp 800w, img/jimami.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="小鉢に盛ったジーマーミ豆腐とわさび（イメージ）"><figcaption><h3>自家製ジーマーミ豆腐</h3><em>¥480</em><p>もっちり、甘めのたれで</p></figcaption></figure>
+        </div>
+      <h3 class="cat">島の料理と締め</h3>
+      <div class="dishes">
+        <figure class="dish"><img src="img/rafute.webp" srcset="img/rafute-800.webp 800w, img/rafute.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="藍色の絵付けの深皿に盛ったラフテーと白髪ねぎ（イメージ）"><figcaption><h3>ラフテー</h3><em>¥850</em><p>三枚肉をやわらかく煮込みます</p></figcaption></figure>
+        <figure class="dish"><img src="img/umibudo.webp" srcset="img/umibudo-800.webp 800w, img/umibudo.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="ガラスの器に盛った海ぶどうとたれ（イメージ）"><figcaption><h3>海ぶどう</h3><em>¥680</em><p>ぷちぷちの食感をポン酢で</p></figcaption></figure>
+        <figure class="dish"><img src="img/rakkyo.webp" srcset="img/rakkyo-800.webp 800w, img/rakkyo.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="竹ざるに盛った島らっきょうの天ぷらと塩（イメージ）"><figcaption><h3>島らっきょうの天ぷら</h3><em>¥620</em><p>揚げたてを塩で</p></figcaption></figure>
+        <figure class="dish"><img src="img/soba.webp" srcset="img/soba-800.webp 800w, img/soba.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="三枚肉とかまぼこ、紅しょうがをのせた沖縄そば（イメージ）"><figcaption><h3>沖縄そば</h3><em>¥680</em><p>締めの一杯に</p></figcaption></figure>
+        </div>
+      <h3 class="cat">お飲み物</h3>
+      <div class="dishes">
+        <figure class="dish"><img src="img/beer.webp" srcset="img/beer-800.webp 800w, img/beer.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="泡の立った生ビールのジョッキ2つ（イメージ）"><figcaption><h3>生ビール</h3><em>¥580</em><p>よく冷えたジョッキで</p></figcaption></figure>
+        <figure class="dish"><img src="img/awamori.webp" srcset="img/awamori-800.webp 800w, img/awamori.webp 1536w" sizes="(max-width:820px) 50vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="素焼きの酒器と、氷を入れた琉球グラス（イメージ）"><figcaption><h3>泡盛（グラス）</h3><em>¥450</em><p>水割り・ロックで</p></figcaption></figure>
+        </div>
+      <div class="price"><div class="row"><div>シークヮーサージュース</div><em>¥380</em></div></div>
       <p class="note">※料金は税込です。写真はイメージです。すべて架空の内容です。</p>
     </div>
   </section>
 
-  <section class="sec" id="course">
+  <section class="sec" id="seats">
     <div class="wrap">
+      <h2>お席</h2>
+      <p class="lead">全42席。人数や過ごし方に合わせてお選びください。</p>
+      <div class="seats">
+        <figure><img src="img/seat-counter.webp" srcset="img/seat-counter-800.webp 800w, img/seat-counter.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="一枚板のカウンターに丸椅子が並び、奥に焼き台がある席（イメージ）"><figcaption><h3>カウンター　8席</h3><p>焼き台の近くで、焼き上がりを待つ時間も楽しめます。お一人や、お二人に。</p></figcaption></figure>
+        <figure><img src="img/table.webp" srcset="img/table-800.webp 800w, img/table.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="木のテーブルと椅子が並ぶ、吊り灯りのテーブル席（イメージ）"><figcaption><h3>テーブル　22席</h3><p>仕事帰りの集まりや、ご家族の食事に。人数に合わせてご案内します。</p></figcaption></figure>
+        <figure><img src="img/zashiki.webp" srcset="img/zashiki-800.webp 800w, img/zashiki.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" loading="lazy" decoding="async" alt="長い座卓と藍色の座布団が並ぶ座敷（イメージ）"><figcaption><h3>座敷　12席</h3><p>靴を脱いで、ゆったりと。小さなお子さま連れや、宴会にどうぞ。</p></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec tint" id="course">
+    <div class="wrap">
+      <figure class="wide top"><img src="img/enkai.webp" srcset="img/enkai-800.webp 800w, img/enkai.webp 1536w" sizes="(max-width:1000px) 100vw, 960px" width="1536" height="1024" loading="lazy" decoding="async" alt="焼き鳥の大皿、刺身、ラフテー、チャンプルーが並ぶ宴会の卓（イメージ）"></figure>
       <h2>人数を入れると、<br>合計がわかります。</h2>
       <div class="calc">
         <fieldset><legend>コース</legend>
@@ -85,7 +113,7 @@
     </div>
   </section>
 
-  <section class="sec tint" id="info">
+  <section class="sec" id="info">
     <div class="wrap">
       <h2>お待ちしています。</h2>
       <dl>
@@ -109,8 +137,6 @@
 <footer><div class="wrap">このページは、架空の居酒屋「まるあかり」によるデザイン制作例です。住所・電話番号・料金を含む掲載情報はすべて架空で、実在の店舗とは関係ありません。写真は画像生成AIで作成したイメージで、実在の人物・店・料理を撮影したものではありません。<p class="back"><a href="https://agarieyrn-create.github.io/">制作サイト一覧へ戻る</a></p></div></footer>
 <nav class="bar" aria-label="ご予約"><a class="main" href="#" data-link="tel">電話で予約</a><a href="#" data-link="map">地図</a></nav>
 <script src="links.js" defer></script>
-<script src="motion.js" defer></script>
-<script src="fire.js" defer></script>
 <script src="calc.js" defer></script>
 </body>
 </html>
