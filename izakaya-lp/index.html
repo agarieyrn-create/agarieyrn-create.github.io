@@ -7,6 +7,7 @@
 <meta name="description" content="那覇市の炭火居酒屋を想定したページです。焼き鳥と島の料理、宴会コース。※架空の店舗によるデザイン制作例です。">
 <link rel="canonical" href="https://agarieyrn-create.github.io/izakaya-lp/">
 <meta property="og:url" content="https://agarieyrn-create.github.io/izakaya-lp/">
+<meta property="og:image" content="https://agarieyrn-create.github.io/izakaya-lp/img/og.jpg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="炭火居酒屋 まるあかり（架空の店舗）">
 <meta property="og:description" content="炭火焼き鳥と島の料理。※架空の店舗によるデザイン制作例です。">
@@ -16,7 +17,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="motion.css">
-<link rel="stylesheet" href="extra.css">
 </head>
 <body>
 <p class="demo">架空の店舗によるデザイン制作例です</p>
@@ -24,9 +24,8 @@
 
 <main id="top">
   <div class="hero">
-    <div class="noren" aria-hidden="true"><i>ま</i><i>る</i><i>あ</i><i>か</i><i>り</i></div>
+    <div class="shot"><img src="img/counter.webp" srcset="img/counter-800.webp 800w, img/counter.webp 1536w" sizes="100vw" width="1536" height="1024" alt="炭火の焼き台で焼き鳥を返す大将と、カウンターで待つ客の後ろ姿（イメージ）" fetchpriority="high"></div>
     <div class="wrap">
-      <svg class="lanterns" viewBox="0 0 300 140" aria-hidden="true"><g transform="translate(10,0)"><g class="lan a"><path class="cord" d="M40 0v26"/><rect class="cap" x="22" y="24" width="36" height="10"/><ellipse class="paper" cx="40" cy="76" rx="38" ry="44"/><path class="rib" d="M7 56h66M3 76h74M7 96h66"/><rect class="cap" x="22" y="118" width="36" height="10"/><text x="40" y="88">酒</text></g></g><g transform="translate(80,0)"><g class="lan b"><path class="cord" d="M40 0v26"/><rect class="cap" x="22" y="24" width="36" height="10"/><ellipse class="paper" cx="40" cy="76" rx="38" ry="44"/><path class="rib" d="M7 56h66M3 76h74M7 96h66"/><rect class="cap" x="22" y="118" width="36" height="10"/><text x="40" y="88">肴</text></g></g><g transform="translate(210,0)"><g class="lan c"><path class="cord" d="M40 0v26"/><rect class="cap" x="22" y="24" width="36" height="10"/><ellipse class="paper" cx="40" cy="76" rx="38" ry="44"/><path class="rib" d="M7 56h66M3 76h74M7 96h66"/><rect class="cap" x="22" y="118" width="36" height="10"/><text x="40" y="88">処</text></g></g></svg>
       <div class="copy">
         <p class="sub">那覇市｜炭火居酒屋</p>
         <h1>今日の疲れは、<br>炭火の前で。</h1>
@@ -37,22 +36,26 @@
     </div>
   </div>
 
-  <section class="x-sec x-demo x-fire" data-demo="4000,5000,4000">
-    <div class="wrap">
-      <p class="label">01　炭火</p>
+  <section class="fire" id="fire">
+    <div class="fire-shot"><img src="img/sumibi.webp" srcset="img/sumibi-800.webp 800w, img/sumibi.webp 1536w" sizes="(max-width:820px) 100vw, 62vw" width="1536" height="1024" alt="赤く熾った炭の上で、焼き鳥の串を返す手元（イメージ）" data-nopar><div class="embers" aria-hidden="true"></div><button type="button" class="stop" hidden>動きを止める</button></div>
+    <div class="fire-text">
       <h2>一本ずつ、<br>目の前で焼きます。</h2>
-      <div class="x-grid">
-        <div class="x-stage"><svg viewBox="0 0 280 240" aria-hidden="true"><g class="glow"><ellipse cx="140" cy="186" rx="118" ry="34"/></g><rect x="24" y="168" width="232" height="46" rx="8" fill="#3a3330"/><g class="coal"><circle cx="56" cy="178" r="13"/><circle cx="86" cy="186" r="13"/><circle cx="116" cy="176" r="13"/><circle cx="146" cy="186" r="13"/><circle cx="176" cy="176" r="13"/><circle cx="206" cy="186" r="13"/><circle cx="230" cy="176" r="13"/></g><g class="flame"><path d="M80 172q-16-18 0-44q18 26 0 44z"/><path d="M140 172q-16-18 0-44q18 26 0 44z"/><path d="M200 172q-16-18 0-44q18 26 0 44z"/></g><g class="smoke"><path d="M96 80q-18-20 0-40"/><path d="M142 74q18-22 0-46"/><path d="M188 80q-16-18 0-38"/></g><g class="skewer"><path d="M20 112h240" stroke="#c9a46a" stroke-width="4" stroke-linecap="round"/><rect x="52" y="100" width="24" height="24" rx="8" fill="#9c5422"/><path d="M57 107l12 10" stroke="#4d2410" stroke-width="3"/><rect x="80" y="100" width="24" height="24" rx="8" fill="#9c5422"/><path d="M85 107l12 10" stroke="#4d2410" stroke-width="3"/><rect x="108" y="100" width="24" height="24" rx="8" fill="#9c5422"/><path d="M113 107l12 10" stroke="#4d2410" stroke-width="3"/><rect x="134" y="100" width="24" height="24" rx="8" fill="#9c5422"/><path d="M139 107l12 10" stroke="#4d2410" stroke-width="3"/><g transform="translate(80,0)"><rect x="80" y="100" width="24" height="24" rx="8" fill="#9c5422"/><rect x="108" y="100" width="24" height="24" rx="8" fill="#9c5422"/></g></g><g class="sauce"><path d="M92 30q14 30 40 66"/></g></svg></div>
-        <div><div class="x-tabs" role="group" aria-label="工程を選ぶ"><button type="button" data-go="0" aria-pressed="false">仕込む</button><button type="button" data-go="1" aria-pressed="false">焼く</button><button type="button" data-go="2" aria-pressed="false">仕上げる</button></div><div class="x-panels"><div data-panel="0"><b>昼のうちに、串打ち</b><p>大きさをそろえて、一本ずつ串に刺します。</p></div><div data-panel="1"><b>炭火で、じっくり</b><p>火の近くで返しながら、外は香ばしく、中はふっくら。</p></div><div data-panel="2"><b>塩か、たれで</b><p>焼きたてを、そのままお席へお運びします。</p></div></div><button type="button" class="x-play" data-play>動きを止める</button></div>
-      </div>
+      <ol class="steps3">
+        <li><b>昼のうちに、串打ち</b>大きさをそろえて、一本ずつ串に刺します。</li>
+        <li><b>炭火で、じっくり</b>返しながら、外は香ばしく、中はふっくら。</li>
+        <li><b>塩か、たれで</b>焼きたてを、そのままお席へお運びします。</li>
+      </ol>
     </div>
   </section>
 
   <section class="sec tint" id="menu">
     <div class="wrap">
-      <p class="label">02　料理</p>
       <h2>まずは、この三品。</h2>
-      <div class="dishes"><div class="item dish"><div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><ellipse cx="100" cy="92" rx="86" ry="28" fill="#e9e1d2"/><ellipse cx="100" cy="88" rx="68" ry="20" fill="#d8cdb9"/><path d="M30 66h140" stroke="#c9a46a" stroke-width="4" stroke-linecap="round"/><rect x="52" y="54" width="24" height="24" rx="8" fill="#9c5422"/><path d="M57 61l12 10" stroke="#4d2410" stroke-width="3"/><rect x="80" y="54" width="24" height="24" rx="8" fill="#9c5422"/><path d="M85 61l12 10" stroke="#4d2410" stroke-width="3"/><rect x="108" y="54" width="24" height="24" rx="8" fill="#9c5422"/><path d="M113 61l12 10" stroke="#4d2410" stroke-width="3"/><rect x="134" y="54" width="24" height="24" rx="8" fill="#9c5422"/><path d="M139 61l12 10" stroke="#4d2410" stroke-width="3"/><path d="M30 94h140" stroke="#c9a46a" stroke-width="4" stroke-linecap="round"/><rect x="52" y="82" width="24" height="24" rx="8" fill="#9c5422"/><path d="M57 89l12 10" stroke="#4d2410" stroke-width="3"/><rect x="80" y="82" width="24" height="24" rx="8" fill="#9c5422"/><path d="M85 89l12 10" stroke="#4d2410" stroke-width="3"/><rect x="108" y="82" width="24" height="24" rx="8" fill="#9c5422"/><path d="M113 89l12 10" stroke="#4d2410" stroke-width="3"/><rect x="134" y="82" width="24" height="24" rx="8" fill="#9c5422"/><path d="M139 89l12 10" stroke="#4d2410" stroke-width="3"/></svg></div><h3>炭火焼き鳥 盛り合わせ</h3><p>5本　塩・たれ</p><em>¥880</em></div><div class="item dish"><div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><ellipse cx="100" cy="92" rx="86" ry="28" fill="#e9e1d2"/><ellipse cx="100" cy="88" rx="68" ry="20" fill="#d8cdb9"/><path d="M48 88q8-46 52-44t54 44q-52 22-106 0z" fill="#6f9a3c"/><circle cx="72" cy="76" r="9" fill="none" stroke="#4f7a28" stroke-width="5"/><circle cx="112" cy="62" r="9" fill="none" stroke="#4f7a28" stroke-width="5"/><circle cx="132" cy="82" r="9" fill="none" stroke="#4f7a28" stroke-width="5"/><rect x="86" y="72" width="17" height="14" rx="3" fill="#f4e7c4"/><rect x="98" y="86" width="17" height="14" rx="3" fill="#f2c230"/><rect x="62" y="86" width="17" height="14" rx="3" fill="#f4e7c4"/><rect x="108" y="76" width="17" height="14" rx="3" fill="#c9775a"/></svg></div><h3>ゴーヤーチャンプルー</h3><p>島豆腐と卵で</p><em>¥780</em></div><div class="item dish"><div class="art"><svg viewBox="0 0 200 130" aria-hidden="true"><ellipse cx="100" cy="92" rx="86" ry="28" fill="#e9e1d2"/><ellipse cx="100" cy="88" rx="68" ry="20" fill="#d8cdb9"/><path d="M52 64l22-10 22 10v20l-22 10-22-10z" fill="#ede6f0"/><path d="M52 64l22 10 22-10-22-10z" fill="#fbf8fc"/><path d="M104 70l22-10 22 10v20l-22 10-22-10z" fill="#ede6f0"/><path d="M104 70l22 10 22-10-22-10z" fill="#fbf8fc"/><circle cx="122" cy="66" r="7" fill="#6f9a3c"/></svg></div><h3>自家製ジーマーミ豆腐</h3><p>もっちり、甘めのたれで</p><em>¥480</em></div></div>
+      <div class="dishes">
+        <figure class="item dish big"><img src="img/yakitori.webp" srcset="img/yakitori-800.webp 800w, img/yakitori.webp 1536w" sizes="(max-width:820px) 100vw, 960px" width="1536" height="1024" alt="焼き物の角皿に並んだ焼き鳥5本とレモン（イメージ）"><figcaption><h3>炭火焼き鳥 盛り合わせ</h3><em>¥880</em><p>5本　塩・たれ</p></figcaption></figure>
+        <figure class="item dish"><img src="img/goya.webp" srcset="img/goya-800.webp 800w, img/goya.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" alt="やちむんの皿に盛ったゴーヤーチャンプルー（イメージ）"><figcaption><h3>ゴーヤーチャンプルー</h3><em>¥780</em><p>島豆腐と卵、ポークで</p></figcaption></figure>
+        <figure class="item dish"><img src="img/jimami.webp" srcset="img/jimami-800.webp 800w, img/jimami.webp 1536w" sizes="(max-width:820px) 100vw, 470px" width="1536" height="1024" alt="小鉢に盛ったジーマーミ豆腐とわさび（イメージ）"><figcaption><h3>自家製ジーマーミ豆腐</h3><em>¥480</em><p>もっちり、甘めのたれで</p></figcaption></figure>
+      </div>
       <div class="price">
         <div class="row"><div>ラフテー</div><em>¥850</em></div>
         <div class="row"><div>海ぶどう</div><em>¥680</em></div>
@@ -61,13 +64,12 @@
         <div class="row"><div>泡盛（グラス）</div><em>¥450</em></div>
         <div class="row"><div>シークヮーサージュース</div><em>¥380</em></div>
       </div>
-      <p class="note">※料金は税込です。料理の絵はイメージです。すべて架空の内容です。</p>
+      <p class="note">※料金は税込です。写真はイメージです。すべて架空の内容です。</p>
     </div>
   </section>
 
   <section class="sec" id="course">
     <div class="wrap">
-      <p class="label">03　宴会コース</p>
       <h2>人数を入れると、<br>合計がわかります。</h2>
       <div class="calc">
         <fieldset><legend>コース</legend>
@@ -85,7 +87,6 @@
 
   <section class="sec tint" id="info">
     <div class="wrap">
-      <p class="label">04　店舗情報</p>
       <h2>お待ちしています。</h2>
       <dl>
         <div class="row"><dt>住所</dt><dd>沖縄県那覇市○○1-2-3（架空）</dd></div>
@@ -105,11 +106,11 @@
   </section>
 </main>
 
-<footer><div class="wrap">このページは、架空の居酒屋「まるあかり」によるデザイン制作例です。住所・電話番号・料金を含む掲載情報はすべて架空で、実在の店舗とは関係ありません。<p class="back"><a href="https://agarieyrn-create.github.io/">制作サイト一覧へ戻る</a></p></div></footer>
+<footer><div class="wrap">このページは、架空の居酒屋「まるあかり」によるデザイン制作例です。住所・電話番号・料金を含む掲載情報はすべて架空で、実在の店舗とは関係ありません。写真は画像生成AIで作成したイメージで、実在の人物・店・料理を撮影したものではありません。<p class="back"><a href="https://agarieyrn-create.github.io/">制作サイト一覧へ戻る</a></p></div></footer>
 <nav class="bar" aria-label="ご予約"><a class="main" href="#" data-link="tel">電話で予約</a><a href="#" data-link="map">地図</a></nav>
 <script src="links.js" defer></script>
 <script src="motion.js" defer></script>
-<script src="extra.js" defer></script>
+<script src="fire.js" defer></script>
 <script src="calc.js" defer></script>
 </body>
 </html>
