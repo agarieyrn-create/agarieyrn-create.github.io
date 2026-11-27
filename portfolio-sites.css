@@ -43,9 +43,9 @@ p{margin-bottom:1.2em}
 .hero--villa h1{max-width:10em;margin:12px 0 20px}
 .hero--villa .hero-copy p{max-width:31em;color:rgba(255,255,255,.83)}
 .hero--villa .kicker{color:rgba(255,255,255,.75)}
-.hero--split{display:grid;grid-template-columns:minmax(320px,.8fr) minmax(0,1.2fr);min-height:640px;background:var(--soft)}
+.hero--split{display:grid;grid-template-columns:minmax(320px,.95fr) minmax(0,1.05fr);min-height:640px;background:var(--soft)}
 .hero--split .hero-copy{align-self:center;padding:84px clamp(28px,7vw,100px) 84px max(28px,calc((100vw - 1180px)/2))}
-.hero--split .hero-copy h1{font-size:clamp(38px,5.2vw,70px);max-width:9em;margin:0 0 24px}
+.hero--split .hero-copy h1{font-size:clamp(36px,4.2vw,56px);max-width:10em;margin:0 0 24px}
 .hero--split .hero-copy p{max-width:34em;color:var(--muted)}
 .hero--split .hero-image{width:100%;height:100%;min-height:640px;object-fit:cover}
 .hero--split .kicker{color:var(--accent)}
@@ -150,7 +150,7 @@ details p{margin:12px 0 0;color:var(--muted)}
   .site-header{padding:10px 24px}
   .site-nav{gap:14px}
   .site-nav a{font-size:12px}
-  .hero--split{grid-template-columns:.9fr 1.1fr}
+  .hero--split{grid-template-columns:minmax(320px,.95fr) minmax(0,1.05fr)}
   .hero--split .hero-copy{padding:58px 32px}
   .process-list{grid-template-columns:repeat(3,1fr)}
   .process-list article:nth-child(3){border-right:0}
