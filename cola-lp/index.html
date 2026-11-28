@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2a0c0b">
+  <meta name="description" content="冷たさ、泡、香り、そしてあとに残る甘み。コーラの魅力を写真とともに味わう、小さな読みもの。">
+  <link rel="canonical" href="https://agarieyrn-create.github.io/cola-lp/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="コーラという、ひと口目の話">
+  <meta property="og:description" content="冷たさ、泡、香り、そしてあとに残る甘み。">
+  <meta property="og:url" content="https://agarieyrn-create.github.io/cola-lp/">
+  <meta property="og:image" content="https://agarieyrn-create.github.io/cola-lp/images/hero.webp">
+  <title>コーラという、ひと口目の話</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #281715;
+      --muted: #79645e;
+      --paper: #f5f0e9;
+      --cream: #eee5db;
+      --red: #a32820;
+      --dark: #240d0c;
+      --serif: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+      --sans: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      --gutter: clamp(22px, 6vw, 96px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.9; }
+    img { display: block; width: 100%; height: auto; }
+    a { color: inherit; }
+    button { font: inherit; }
+    .topbar { position: absolute; z-index: 5; inset: 0 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 26px var(--gutter); color: #fff; }
+    .brand { text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: .2em; }
+    .nav { display: flex; gap: clamp(18px, 3vw, 42px); font-size: 12px; letter-spacing: .12em; }
+    .nav a { text-decoration: none; opacity: .88; transition: opacity .25s ease; }
+    .nav a:hover { opacity: 1; }
+    .hero { position: relative; display: grid; align-items: center; min-height: min(900px, 100svh); min-height: max(680px, 100svh); overflow: hidden; color: #fff; background: var(--dark); }
+    .hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; animation: hero-settle 20s ease-in-out infinite alternate; }
+    .hero::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(27,8,8,.84) 0%, rgba(36,10,9,.52) 42%, rgba(36,10,9,.08) 80%), linear-gradient(0deg, rgba(24,7,6,.25), transparent 38%); }
+    .hero__copy { position: relative; z-index: 1; width: min(850px, 100%); padding: 150px var(--gutter) 110px; }
+    .eyebrow { margin: 0 0 22px; font-size: 10px; font-weight: 700; letter-spacing: .24em; text-transform: uppercase; }
+    .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(42px, 7.4vw, 104px); font-weight: 500; line-height: 1.36; letter-spacing: .045em; }
+    .hero__lead { max-width: 520px; margin: 22px 0 36px; color: rgba(255,255,255,.82); font-size: clamp(14px, 1.35vw, 17px); }
+    .cta { display: inline-flex; min-height: 56px; align-items: center; gap: 28px; padding: 0 24px; color: #fff; background: var(--red); text-decoration: none; font-size: 12px; font-weight: 700; letter-spacing: .08em; transition: background .25s ease, transform .25s ease; }
+    .cta:hover { background: #c0392f; transform: translateY(-2px); }
+    .cta::after { content: "↓"; font-size: 17px; font-weight: 400; }
+    .scroll-note { position: absolute; z-index: 2; right: var(--gutter); bottom: 36px; display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,.75); font-size: 9px; letter-spacing: .2em; writing-mode: vertical-rl; }
+    .scroll-note::after { width: 1px; height: 48px; content: ""; background: rgba(255,255,255,.62); }
+    .section { padding: clamp(80px, 11vw, 156px) var(--gutter); }
+    .section__inner { width: min(1220px, 100%); margin: 0 auto; }
+    .section-kicker { margin: 0 0 18px; color: var(--red); font-family: var(--serif); font-size: 12px; letter-spacing: .14em; }
+    h2 { margin: 0; font-family: var(--serif); font-size: clamp(32px, 4.5vw, 60px); font-weight: 500; line-height: 1.52; letter-spacing: .04em; }
+    .section-copy { max-width: 590px; color: var(--muted); font-size: 14px; }
+    .intro { background: var(--paper); }
+    .intro__grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: clamp(40px, 8vw, 116px); align-items: center; }
+    .photo-frame { position: relative; overflow: hidden; background: #d4c0b1; }
+    .photo-frame img { height: 100%; min-height: 360px; object-fit: cover; transition: transform .8s cubic-bezier(.2,.65,.25,1); }
+    .photo-frame:hover img { transform: scale(1.035); }
+    .intro__photo { aspect-ratio: 1.22 / 1; }
+    .photo-caption { position: absolute; inset: auto 0 0; padding: 38px 22px 17px; color: white; font-family: var(--serif); font-size: 13px; letter-spacing: .08em; background: linear-gradient(transparent, rgba(23,9,8,.65)); }
+    .intro__text { padding: 20px 0; }
+    .intro__text .section-copy { margin-top: 22px; }
+    .number-tag { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 25px; color: var(--red); font-size: 10px; letter-spacing: .18em; }
+    .number-tag::after { width: 36px; height: 1px; content: ""; background: currentColor; }
+    .flow { color: #f8eee6; background: var(--dark); }
+    .flow .section-kicker { color: #e7a29a; }
+    .flow__head { display: flex; align-items: end; justify-content: space-between; gap: 28px; }
+    .flow__head p { max-width: 350px; margin: 0 0 12px; color: rgba(248,238,230,.68); font-size: 12px; }
+    .flow__stage { display: grid; grid-template-columns: minmax(280px, .8fr) minmax(0, 1.2fr); align-items: center; gap: clamp(40px, 8vw, 110px); margin-top: 70px; padding: clamp(30px, 6vw, 74px); border: 1px solid rgba(255,255,255,.15); background: radial-gradient(ellipse at 25% 48%, rgba(153,43,33,.22), transparent 55%), rgba(255,255,255,.025); }
+    .flow__visual { position: relative; display: grid; min-height: 330px; place-items: center; overflow: hidden; }
+    .glass { position: relative; width: 130px; height: 238px; overflow: hidden; border: 2px solid rgba(238,235,226,.74); border-top: 1px solid rgba(238,235,226,.5); border-radius: 7px 7px 24px 24px; transform: perspective(300px) rotateX(-2deg); box-shadow: inset 8px 0 20px rgba(255,255,255,.1), 0 24px 70px rgba(0,0,0,.3); }
+    .glass::before { position: absolute; z-index: 2; inset: 6px 8px auto; height: 5px; border-radius: 50%; content: ""; background: rgba(255,255,255,.28); }
+    .drink { position: absolute; inset: auto 0 0; height: 70%; background: linear-gradient(90deg, #36110d, #8f2d1e 48%, #45130f); transition: height .7s cubic-bezier(.2,.7,.2,1); }
+    .foam { position: absolute; z-index: 3; inset: auto 2px calc(70% - 4px); height: 12px; border-radius: 50%; background: rgba(245,219,180,.7); filter: blur(2px); transition: bottom .7s ease, opacity .5s ease; }
+    .bubble { position: absolute; z-index: 4; bottom: 14px; width: 5px; height: 5px; border: 1px solid rgba(255,232,191,.9); border-radius: 50%; animation: rise 2.6s linear infinite; }
+    .bubble:nth-child(2) { left: 26%; animation-delay: .4s; }
+    .bubble:nth-child(3) { left: 53%; animation-delay: 1.2s; }
+    .bubble:nth-child(4) { left: 73%; animation-delay: .8s; }
+    .flow__visual::before, .flow__visual::after { position: absolute; width: 210px; height: 210px; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; content: ""; }
+    .flow__visual::after { width: 290px; height: 290px; }
+    .flow[data-state="pour"] .drink { height: 35%; }
+    .flow[data-state="pour"] .foam { bottom: calc(35% - 4px); }
+    .flow[data-state="sip"] .drink { height: 64%; }
+    .flow[data-state="sip"] .foam { bottom: calc(64% - 4px); opacity: .34; }
+    .flow[data-state="fizz"] .drink { height: 77%; }
+    .flow[data-state="fizz"] .foam { bottom: calc(77% - 4px); }
+    .flow__controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 20px; }
+    .flow__step, .motion-button { padding: 10px 15px; color: rgba(255,255,255,.72); border: 1px solid rgba(255,255,255,.28); border-radius: 0; background: transparent; font-size: 11px; letter-spacing: .08em; cursor: pointer; transition: color .2s ease, background .2s ease, border-color .2s ease; }
+    .flow__step[aria-pressed="true"] { color: #fff; border-color: #d68c7f; background: rgba(163,40,32,.42); }
+    .flow__description { min-height: 52px; margin: 0 0 22px; color: rgba(248,238,230,.72); font-size: 13px; }
+    .motion-button { border-color: transparent; padding-left: 0; }
+    .motion-button:hover { color: #fff; }
+    .is-paused .bubble { animation-play-state: paused; }
+    .taste { background: var(--cream); }
+    .taste__grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(48px, 9vw, 130px); align-items: center; }
+    .taste__list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; margin: 34px 0 0; padding: 0; list-style: none; }
+    .taste__list li { padding: 18px 0 17px; border-top: 1px solid rgba(60,32,25,.18); }
+    .taste__list strong { display: block; margin-bottom: 5px; font-family: var(--serif); font-size: 17px; font-weight: 500; }
+    .taste__list span { display: block; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .taste__photo { aspect-ratio: .98 / 1; }
+    .bubble-story { position: relative; min-height: 520px; display: grid; align-items: end; overflow: hidden; color: #fff; background: var(--dark); }
+    .bubble-story img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center 52%; }
+    .bubble-story::after { position: absolute; inset: 0; content: ""; background: linear-gradient(0deg, rgba(27,8,8,.8), rgba(27,8,8,.03) 72%); }
+    .bubble-story__copy { position: relative; z-index: 1; width: min(1220px, 100%); margin: 0 auto; padding: 80px var(--gutter); }
+    .bubble-story h2 { font-size: clamp(34px, 5vw, 68px); }
+    .bubble-story p { max-width: 480px; color: rgba(255,255,255,.78); font-size: 13px; }
+    .aroma { background: var(--paper); }
+    .aroma__grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 8vw, 110px); align-items: center; }
+    .aroma__photo { aspect-ratio: 1.25 / 1; }
+    .scenes { background: #e7ddd2; }
+    .scenes__intro { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 46px; }
+    .scenes__intro p { max-width: 360px; margin: 0 0 8px; color: var(--muted); font-size: 12px; }
+    .scene-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .scene-card { min-width: 0; background: var(--paper); }
+    .scene-card__photo { aspect-ratio: .92 / 1; overflow: hidden; background: #d2b8a8; }
+    .scene-card__photo img { height: 100%; object-fit: cover; transition: transform .7s ease; }
+    .scene-card:hover img { transform: scale(1.04); }
+    .scene-card__copy { padding: 18px 17px 20px; }
+    .scene-card h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 16px; font-weight: 500; }
+    .scene-card p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .guide { background: var(--paper); }
+    .guide__grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(48px, 9vw, 130px); align-items: start; }
+    .guide__list { margin: 5px 0 0; padding: 0; list-style: none; counter-reset: guide; }
+    .guide__list li { position: relative; padding: 0 0 22px 48px; border-bottom: 1px solid rgba(60,32,25,.15); counter-increment: guide; }
+    .guide__list li + li { padding-top: 22px; }
+    .guide__list li::before { position: absolute; top: 0; left: 0; content: "0" counter(guide); color: var(--red); font-family: var(--serif); font-size: 14px; }
+    .guide__list li + li::before { top: 22px; }
+    .guide__list strong { display: block; margin-bottom: 5px; font-family: var(--serif); font-size: 16px; font-weight: 500; }
+    .guide__list span { display: block; color: var(--muted); font-size: 12px; }
+    .closing { position: relative; min-height: 620px; display: grid; align-items: center; overflow: hidden; color: #fff; background: var(--dark); }
+    .closing img { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: center 45%; }
+    .closing::after { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(26,8,8,.82), rgba(29,8,8,.25) 72%), linear-gradient(0deg, rgba(20,6,5,.24), transparent); }
+    .closing__copy { position: relative; z-index: 1; width: min(1220px, 100%); margin: 0 auto; padding: 100px var(--gutter); }
+    .closing .section-kicker { color: #f0b4a9; }
+    .closing h2 { max-width: 690px; }
+    .closing p { max-width: 490px; color: rgba(255,255,255,.75); font-size: 13px; }
+    .back-top { display: inline-flex; align-items: center; gap: 12px; margin-top: 16px; color: #fff; font-size: 11px; letter-spacing: .1em; text-decoration: none; }
+    .back-top::after { content: "↑"; font-size: 17px; }
+    footer { display: flex; justify-content: space-between; gap: 30px; padding: 25px var(--gutter); color: #d8c9bd; background: #1b0908; font-size: 9px; line-height: 1.8; }
+    footer p { max-width: 900px; margin: 0; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .75s ease, transform .75s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @keyframes hero-settle { from { transform: scale(1); } to { transform: scale(1.035); } }
+    @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: .9; } 100% { transform: translateY(-175px); opacity: 0; } }
+    @media (max-width: 860px) {
+      .intro__grid, .taste__grid, .aroma__grid, .guide__grid { grid-template-columns: 1fr 1fr; gap: 34px; }
+      .scene-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .scene-card__photo { aspect-ratio: 1.2 / 1; }
+      .flow__stage { grid-template-columns: .8fr 1.2fr; gap: 25px; }
+    }
+    @media (max-width: 600px) {
+      .topbar { padding-top: 18px; }
+      .nav { gap: 14px; font-size: 10px; }
+      .hero { min-height: max(680px, 94svh); }
+      .hero__photo { object-position: 62% center; }
+      .hero::after { background: linear-gradient(90deg, rgba(27,8,8,.76), rgba(36,10,9,.28) 76%), linear-gradient(0deg, rgba(24,7,6,.4), transparent 50%); }
+      .hero__copy { padding-top: 130px; padding-bottom: 100px; }
+      .hero h1 { font-size: clamp(40px, 12vw, 62px); }
+      .scroll-note { bottom: 22px; }
+      .section { padding-top: 78px; padding-bottom: 78px; }
+      .intro__grid, .taste__grid, .aroma__grid, .guide__grid, .flow__stage { grid-template-columns: 1fr; }
+      .intro__grid { gap: 28px; }
+      .intro__photo { order: 2; aspect-ratio: 1.15 / 1; }
+      .intro__text { padding-bottom: 0; }
+      .photo-frame img { min-height: 0; }
+      .flow__head, .scenes__intro { display: block; }
+      .flow__head p, .scenes__intro p { margin-top: 14px; }
+      .flow__stage { gap: 20px; margin-top: 36px; padding: 25px 20px; }
+      .flow__visual { min-height: 280px; }
+      .taste__photo { order: -1; aspect-ratio: 1.15 / 1; }
+      .taste__list { gap: 0 18px; }
+      .bubble-story { min-height: 450px; }
+      .scene-grid { gap: 10px; }
+      .scene-card__copy { padding: 13px 12px 15px; }
+      .scene-card h3 { font-size: 14px; }
+      .scene-card p { font-size: 10px; }
+      .closing { min-height: 540px; }
+      footer { display: block; }
+      footer .brand { display: inline-block; margin-bottom: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="COLA NOTES トップへ">COLA NOTES</a>
+    <nav class="nav" aria-label="ページ内ナビゲーション">
+      <a href="#taste">味</a>
+      <a href="#scene">シーン</a>
+      <a href="#guide">飲み方</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero__photo" src="images/hero.webp" width="1600" height="900" alt="氷と水滴をまとったグラスのコーラ。背景に無地のガラスボトル" fetchpriority="high">
+      <div class="hero__copy">
+        <p class="eyebrow">A little story about cola</p>
+        <h1 id="hero-title">ひと口目の、<br>あの一瞬のために。</h1>
+        <p class="hero__lead">冷たさ、泡、そしてあとに残る甘み。何気ない一杯にある、気分が切り替わる瞬間を、写真とともにゆっくり振り返ります。</p>
+        <a class="cta" href="#guide">いちばんおいしい飲み方を知る</a>
+      </div>
+      <span class="scroll-note" aria-hidden="true">SCROLL</span>
+    </section>
+
+    <section class="section intro" aria-labelledby="intro-title">
+      <div class="section__inner intro__grid">
+        <figure class="photo-frame intro__photo reveal">
+          <img src="images/pour.webp" width="1536" height="1024" alt="氷の入ったグラスへ、コーラを注ぐ瞬間" loading="lazy" decoding="async">
+          <figcaption class="photo-caption">注いだ瞬間から、もうおいしい。</figcaption>
+        </figure>
+        <div class="intro__text reveal">
+          <span class="number-tag">01　爽快感</span>
+          <h2 id="intro-title">のどを通る、<br>あの刺激。</h2>
+          <p class="section-copy">コーラの魅力をひとつ挙げるなら、ひと口目の爽快感。強めの炭酸が舌とのどを一気に冷まし、甘みがそのあとを追いかけます。暑い日の帰り道も、気分を切り替えたい午後も。この一瞬が、いつもの時間を少し特別にします。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flow" id="flow" data-state="pour" aria-labelledby="flow-title">
+      <div class="section__inner">
+        <div class="flow__head reveal">
+          <div><p class="section-kicker">FROM THE FIRST POUR</p><h2 id="flow-title">注いで、はじけて、<br>飲みごろ。</h2></div>
+          <p>表示を選ぶと、グラスの中の様子が変わります。<br>泡が落ち着くまでの短い時間も、楽しみのうち。</p>
+        </div>
+        <div class="flow__stage reveal">
+          <div class="flow__visual" aria-hidden="true">
+            <div class="glass"><div class="drink"></div><div class="foam"></div><span class="bubble" style="left:15%"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></div>
+          </div>
+          <div>
+            <p class="section-kicker">ひと口目まで</p>
+            <div class="flow__controls" role="group" aria-label="グラスの状態を選ぶ">
+              <button class="flow__step" type="button" data-state-choice="pour" aria-pressed="true">注ぐ</button>
+              <button class="flow__step" type="button" data-state-choice="fizz" aria-pressed="false">はじける</button>
+              <button class="flow__step" type="button" data-state-choice="sip" aria-pressed="false">飲みごろ</button>
+            </div>
+            <p class="flow__description" id="flow-description" aria-live="polite">グラスを少し傾けて、静かに注ぎます。</p>
+            <button class="motion-button" id="motion-toggle" type="button" aria-pressed="false">動きを止める</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section taste" id="taste" aria-labelledby="taste-title">
+      <div class="section__inner taste__grid">
+        <div class="reveal">
+          <span class="number-tag">02　味</span>
+          <h2 id="taste-title">甘いだけでは、<br>終わらない。</h2>
+          <ul class="taste__list">
+            <li><strong>甘み</strong><span>最初に来る、はっきりした甘さ。冷たいほど輪郭が立ちます。</span></li>
+            <li><strong>酸味</strong><span>柑橘を思わせる軽い酸味が、甘さを重たくしません。</span></li>
+            <li><strong>香り</strong><span>バニラやシナモンを思わせるスパイスの香りが、鼻に抜けます。</span></li>
+            <li><strong>炭酸</strong><span>細かい泡が口の中ではじけて、後味を軽くします。</span></li>
+          </ul>
+        </div>
+        <figure class="photo-frame taste__photo reveal">
+          <img src="images/ice.webp" width="1536" height="1024" alt="氷が入ったグラスのコーラにつく、細かな水滴" loading="lazy" decoding="async">
+          <figcaption class="photo-caption">冷たさが、味の輪郭をつくる。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="bubble-story" aria-labelledby="bubble-title">
+      <img src="images/bubbles.webp" width="1536" height="1024" alt="氷のまわりで弾けるコーラの細かな泡" loading="lazy" decoding="async">
+      <div class="bubble-story__copy reveal">
+        <p class="section-kicker">THE LITTLE SPARKS</p>
+        <h2 id="bubble-title">泡の一粒まで、<br>おいしさのうち。</h2>
+        <p>グラスの中で立ちのぼる泡。口の中でほどける刺激。見ても、飲んでも心地よい、コーラらしさのひとつです。</p>
+      </div>
+    </section>
+
+    <section class="section aroma" aria-labelledby="aroma-title">
+      <div class="section__inner aroma__grid">
+        <div class="reveal">
+          <span class="number-tag">03　香り</span>
+          <h2 id="aroma-title">甘さのあとに、<br>ふわりと残る香り。</h2>
+          <p class="section-copy">柑橘を思わせる軽やかさに、バニラやシナモンのようなスパイスの気配。ひと口ごとに表情が変わるから、最後のひと口まで飽きずに楽しめます。</p>
+        </div>
+        <figure class="photo-frame aroma__photo reveal">
+          <img src="images/aroma.webp" width="1536" height="1024" alt="コーラのグラスに添えたシナモン、バニラ、オレンジピール、クローブ" loading="lazy" decoding="async">
+          <figcaption class="photo-caption">甘みの奥にある、スパイスの気配。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section scenes" id="scene" aria-labelledby="scene-title">
+      <div class="section__inner">
+        <div class="scenes__intro reveal">
+          <div><span class="number-tag">04　シーン</span><h2 id="scene-title">どんな場面にも、<br>合う一杯。</h2></div>
+          <p>食事の時間にも、ひと息つく時間にも。思い浮かべるだけで、ちょっと飲みたくなる場面を集めました。</p>
+        </div>
+        <div class="scene-grid">
+          <article class="scene-card reveal">
+            <div class="scene-card__photo"><img src="images/pairing.webp" width="1536" height="1024" alt="ハンバーガーとフライドポテトに添えた氷入りコーラ" loading="lazy" decoding="async"></div>
+            <div class="scene-card__copy"><h3>食事と一緒に</h3><p>肉料理や揚げ物のあとに、炭酸で口の中をすっきり。</p></div>
+          </article>
+          <article class="scene-card reveal">
+            <div class="scene-card__photo"><img src="images/summer.webp" width="1536" height="1024" alt="夏の日差しの下、木のテーブルに置かれた冷たいコーラ" loading="lazy" decoding="async"></div>
+            <div class="scene-card__copy"><h3>夏のひと休み</h3><p>氷をたっぷり入れて、汗が引くまでゆっくり味わう。</p></div>
+          </article>
+          <article class="scene-card reveal">
+            <div class="scene-card__photo"><img src="images/break.webp" width="1536" height="1024" alt="午後のデスクに置かれた、氷入りコーラ" loading="lazy" decoding="async"></div>
+            <div class="scene-card__copy"><h3>仕事の合間に</h3><p>数口飲んで深呼吸。気持ちを切り替える短い休憩。</p></div>
+          </article>
+          <article class="scene-card reveal">
+            <div class="scene-card__photo"><img src="images/movie.webp" width="1536" height="1024" alt="映画の時間に楽しむコーラとポップコーン" loading="lazy" decoding="async"></div>
+            <div class="scene-card__copy"><h3>映画のおともに</h3><p>好きな作品を再生したら、冷たい一杯も手元に。</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide" id="guide" aria-labelledby="guide-title">
+      <div class="section__inner guide__grid">
+        <div class="reveal">
+          <span class="number-tag">05　飲み方</span>
+          <h2 id="guide-title">いつもの一杯を、<br>もう少しおいしく。</h2>
+          <p class="section-copy">道具も特別な準備もいりません。少しの工夫で、最後まで冷たく、炭酸の心地よさを楽しめます。</p>
+        </div>
+        <ol class="guide__list reveal">
+          <li><strong>飲む直前まで、しっかり冷やす</strong><span>冷たいほど、甘みと炭酸の輪郭がすっきりします。</span></li>
+          <li><strong>グラスも先に冷やしておく</strong><span>氷を入れて少し置くと、注いだときの泡立ちが落ち着きます。</span></li>
+          <li><strong>氷はグラスいっぱいに</strong><span>氷を多めにすると溶けにくく、最後まで味が薄まりにくくなります。</span></li>
+          <li><strong>氷に当てず、グラスの壁沿いに注ぐ</strong><span>泡を逃がしにくく、炭酸の刺激が長持ちします。</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <img src="images/cheers.webp" width="1536" height="1024" alt="夕食のテーブルでコーラのグラスを合わせる人たち" loading="lazy" decoding="async">
+      <div class="closing__copy reveal">
+        <p class="section-kicker">A GOOD MOMENT, RIGHT NOW</p>
+        <h2 id="closing-title">今日の一本は、<br>冷えていますか。</h2>
+        <p>冷やして、注いで、ひと口目を味わう。それだけで、いつものコーラが少し違って感じられます。</p>
+        <a class="back-top" href="#top">もう一度、はじめから見る</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a class="brand" href="#top">COLA NOTES</a>
+    <p>このページは、コーラの魅力を紹介する非公式のファンページです。特定の企業・ブランドとは関係ありません。「コーラ」は一般名称として使用しています。掲載画像は画像生成によるイメージです。</p>
+  </footer>
+  <script>
+    const flow = document.querySelector('.flow');
+    const description = document.querySelector('#flow-description');
+    const messages = {
+      pour: 'グラスを少し傾けて、静かに注ぎます。',
+      fizz: '立ちのぼる泡が、ひと口目の刺激を連れてきます。',
+      sip: '泡が少し落ち着いたら、いちばんの飲みごろ。'
+    };
+    document.querySelectorAll('[data-state-choice]').forEach((button) => {
+      button.addEventListener('click', () => {
+        flow.dataset.state = button.dataset.stateChoice;
+        document.querySelectorAll('[data-state-choice]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        description.textContent = messages[button.dataset.stateChoice];
+      });
+    });
+    const motionToggle = document.querySelector('#motion-toggle');
+    motionToggle.addEventListener('click', () => {
+      const paused = motionToggle.getAttribute('aria-pressed') !== 'true';
+      flow.classList.toggle('is-paused', paused);
+      motionToggle.setAttribute('aria-pressed', String(paused));
+      motionToggle.textContent = paused ? '動きを再開する' : '動きを止める';
+    });
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ('IntersectionObserver' in window && !reducedMotion) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.14 });
+      document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
+    }
+  </script>
+</body>
+</html>
